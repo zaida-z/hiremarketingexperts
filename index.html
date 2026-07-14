@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FCFAF6">
 <title>Coffee &amp; Campaigns — hiremarketingexpert.com</title>
 <meta name="description" content="Ideas brewed daily. Campaigns crafted carefully. Case files, grids and strategy from a working desk.">
 
@@ -303,6 +304,137 @@ section{position:relative;z-index:2}
   #curtain{display:none}
   .nb-cover{transform:rotateY(-178deg)}
 }
+
+
+/* ============================================================
+   RESPONSIVE: tablets and phones
+   ============================================================ */
+html{-webkit-text-size-adjust:100%}
+body{-webkit-tap-highlight-color:transparent}
+img{height:auto}
+.chrome{padding-left:max(var(--gut), env(safe-area-inset-left));padding-right:max(var(--gut), env(safe-area-inset-right))}
+
+/* ---- iPad / tablet: 1024px and under ---- */
+@media(max-width:1024px){
+  :root{--gut:clamp(20px,4.5vw,44px)}
+  .marq span{font-size:clamp(64px,15vw,150px)}
+  .band{margin-top:clamp(40px,7vh,80px)}
+  .method-grid{grid-template-columns:repeat(2,1fr);gap:36px}
+  .method-grid .mcard:last-child{grid-column:1 / -1}
+  .grid-row{gap:clamp(24px,4vw,48px)}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+  #ending{height:300svh}
+}
+
+/* ---- iPad portrait and large phones: 900px and under ---- */
+@media(max-width:900px){
+  #hero{padding-top:15svh;min-height:auto;padding-bottom:6vh}
+  h1.clue{font-size:clamp(34px,8.4vw,56px);max-width:100%}
+  .hero-body{gap:26px;align-items:flex-start;flex-direction:column}
+  .hero-body p{max-width:100%}
+  .cta-row{width:100%;gap:10px}
+  .cta{flex:1 1 auto;justify-content:center;padding:15px 18px;font-size:11px;letter-spacing:.14em}
+  .method-grid{grid-template-columns:1fr;gap:38px}
+  .method-grid .mcard:last-child{grid-column:auto}
+  .grid-row{grid-template-columns:1fr;gap:26px;margin-top:clamp(44px,8vh,70px)}
+  .grid-print,.grid-row:nth-child(even of .grid-row) .grid-print{transform:none;order:0}
+  .grid-print .tape{width:90px;height:24px}
+  .desk-stage{min-height:auto;padding:8vh 0}
+  .dos-stamp{position:static;display:inline-block;margin-bottom:22px;transform:rotate(-3deg)}
+  .dos-photo{max-width:100%}
+}
+
+/* ---- phones: 640px and under ---- */
+@media(max-width:640px){
+  :root{--gut:20px}
+  .chrome{padding-top:16px;font-size:9px;letter-spacing:.12em}
+  .chrome .idx{font-size:9px}
+  .wm-icon{width:1em;height:1em}
+
+  #hero{padding-top:17svh}
+  .eyebrow{font-size:9px;letter-spacing:.22em;margin-bottom:20px}
+  .eyebrow .rule{width:34px}
+  h1.clue{font-size:clamp(32px,9.6vw,46px);line-height:1.06}
+  .hero-body{margin-top:22px}
+  .hero-body p{font-size:15px;line-height:1.7}
+  .cta-row{flex-direction:column}
+  .cta{width:100%;padding:16px}
+
+  .marq span{font-size:clamp(52px,17vw,84px);letter-spacing:-.04em}
+  .band{margin-top:44px;padding-bottom:16px}
+  .sigrow{flex-direction:column;align-items:flex-start;gap:14px}
+  .scrollnote{text-align:left;font-size:9px}
+  .sig{font-size:19px}
+
+  .sect-h{font-size:clamp(32px,9vw,46px)}
+  .cases-head .note{font-size:17px}
+  .marker{font-size:9px;letter-spacing:.2em;margin-bottom:18px}
+
+  .file{padding:22px 0;gap:10px}
+  .file .num{font-size:10px}
+  .file .ttl{font-size:clamp(21px,6.4vw,30px)}
+  .file .open{width:42px;height:42px}
+  .file .swash{display:none}
+
+  .grid-copy h3{font-size:clamp(24px,7vw,32px)}
+  .grid-copy p{font-size:15px;line-height:1.75}
+  .grid-copy .hand{font-size:17px}
+  .grid-print{padding:10px 10px 14px}
+
+  .proof-grid{grid-template-columns:1fr;gap:28px}
+  .stat-n{font-size:clamp(38px,12vw,56px)}
+
+  .svc-head{padding:18px 0;grid-template-columns:1fr auto}
+  .svc .sw{font-size:clamp(26px,8vw,40px)}
+  .svc .plus{width:38px;height:38px}
+  .svc-body-inner{padding:0 0 24px}
+  .svc-body p{font-size:15px}
+  .chip{font-size:9px;padding:7px 10px}
+  .svc-ticker span{font-size:10px;padding-right:28px}
+
+  .dos-bar{padding:14px var(--gut)}
+  .dos-close{font-size:9px;gap:8px}
+  .dos-inner{padding-bottom:16vh}
+  .dos-hero h2{font-size:clamp(28px,8.4vw,40px)}
+  .dos-quote{font-size:20px;padding-left:18px}
+  .dos-v{font-size:15px}
+
+  #ending{height:260svh}
+  .notebook{width:92vw;aspect-ratio:1/1.15}
+  .write{font-size:clamp(19px,5.6vw,26px)}
+  .write-wrap{padding:0 4%}
+  .pencil{width:74px}
+  .mail-k{font-size:8px;letter-spacing:.2em}
+  .nb-page::before{width:18px}
+}
+
+/* ---- very small phones ---- */
+@media(max-width:380px){
+  .marq span{font-size:48px}
+  h1.clue{font-size:30px}
+  .write{font-size:18px}
+}
+
+/* ---- touch devices: kill hover-only affordances, keep tap targets honest ---- */
+@media(hover:none){
+  .file:hover .swash{transform:scaleY(0)}
+  .file:hover .open{background:transparent;border-color:var(--prussian);transform:none}
+  .file:hover .open svg{stroke:var(--prussian)}
+  .file .peek{display:none}
+  .grid-print:hover img{transform:scale(1.02)}
+  .grid-print img{transform:scale(1.02)}
+  .cta:hover .flood{transform:scaleY(0)}
+  .cta.cta-fill:hover .flood{transform:scaleY(0)}
+  a,button{touch-action:manipulation}
+}
+
+/* ---- landscape phones: don't let the hero eat the screen ---- */
+@media(max-height:520px) and (orientation:landscape){
+  #hero{padding-top:12svh}
+  .marq span{font-size:74px}
+  .band{margin-top:26px}
+}
+
 </style>
 </head>
 <body>
@@ -446,7 +578,7 @@ section{position:relative;z-index:2}
     <div class="grid-row">
       <figure class="grid-print">
         <span class="tape"></span>
-        <div class="frame"><img src="assets/grid-coffee.jpg" alt="Three by three Instagram grid for a specialty café: croissants, espresso tamping, iced lattes in warm morning light" loading="lazy"></div>
+        <div class="frame"><img src="assets/grid-coffee.jpg" srcset="assets/grid-coffee-640.jpg 640w, assets/grid-coffee.jpg 1080w" sizes="(max-width: 900px) 92vw, 44vw" alt="Three by three Instagram grid for a specialty café: croissants, espresso tamping, iced lattes in warm morning light" loading="lazy"></div>
         <figcaption><span>GRID 01 / CAFÉ</span><span>3 × 3 / WARM DOCUMENTARY</span></figcaption>
       </figure>
       <div class="grid-copy">
@@ -461,7 +593,7 @@ section{position:relative;z-index:2}
     <div class="grid-row">
       <figure class="grid-print">
         <span class="tape"></span>
-        <div class="frame"><img src="assets/grid-diving.jpg" alt="Three by three Instagram grid for a dive school: divers underwater, gear laid on sand, turquoise water and turtles" loading="lazy"></div>
+        <div class="frame"><img src="assets/grid-diving.jpg" srcset="assets/grid-diving-640.jpg 640w, assets/grid-diving.jpg 1080w" sizes="(max-width: 900px) 92vw, 44vw" alt="Three by three Instagram grid for a dive school: divers underwater, gear laid on sand, turquoise water and turtles" loading="lazy"></div>
         <figcaption><span>GRID 02 / DIVE SCHOOL</span><span>3 × 3 / TWO WORLDS</span></figcaption>
       </figure>
       <div class="grid-copy">
@@ -476,7 +608,7 @@ section{position:relative;z-index:2}
     <div class="grid-row">
       <figure class="grid-print">
         <span class="tape"></span>
-        <div class="frame"><img src="assets/grid-wedding.jpg" alt="Three by three Instagram grid for destination weddings: ceremonies by the sea, candlelit interiors, haldi and baraat moments" loading="lazy"></div>
+        <div class="frame"><img src="assets/grid-wedding.jpg" srcset="assets/grid-wedding-640.jpg 640w, assets/grid-wedding.jpg 1080w" sizes="(max-width: 900px) 92vw, 44vw" alt="Three by three Instagram grid for destination weddings: ceremonies by the sea, candlelit interiors, haldi and baraat moments" loading="lazy"></div>
         <figcaption><span>GRID 03 / WEDDINGS</span><span>3 × 3 / THE GUEST'S EYE</span></figcaption>
       </figure>
       <div class="grid-copy">
@@ -490,7 +622,7 @@ section{position:relative;z-index:2}
     <div class="grid-row">
       <figure class="grid-print">
         <span class="tape"></span>
-        <div class="frame"><img src="assets/grid-pilates.jpg" alt="Three by three Instagram grid for a reformer pilates studio: bone and greige palette, equipment still lifes, bodies mid movement" loading="lazy"></div>
+        <div class="frame"><img src="assets/grid-pilates.jpg" srcset="assets/grid-pilates-640.jpg 640w, assets/grid-pilates.jpg 1080w" sizes="(max-width: 900px) 92vw, 44vw" alt="Three by three Instagram grid for a reformer pilates studio: bone and greige palette, equipment still lifes, bodies mid movement" loading="lazy"></div>
         <figcaption><span>GRID 04 / PILATES</span><span>3 × 3 / ONE MATERIAL WORLD</span></figcaption>
       </figure>
       <div class="grid-copy">
@@ -617,6 +749,8 @@ section{position:relative;z-index:2}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.1.13/lenis.min.js"></script>
 <script>
 const REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const TOUCH   = window.matchMedia('(hover:none)').matches;
+const SMALL   = window.matchMedia('(max-width:900px)').matches;
 
 /* ---------- CASE DATA ---------- */
 const CASES = [
@@ -853,7 +987,7 @@ function renderCase(i){
       <h2>${c.a}<br><em>${c.b}</em></h2>
       <div class="client">${c.client}</div>
     </div>
-    ${c.img?`<figure class="dos-photo"><div class="frame"><img src="${c.img}" alt="The published Instagram grid for this case"></div><figcaption><span>${c.imgcap[0]}</span><span>${c.imgcap[1]}</span></figcaption></figure>`:''}
+    ${c.img?`<figure class="dos-photo"><div class="frame"><img src="${c.img}" srcset="${c.img.replace('.jpg','-640.jpg')} 640w, ${c.img} 1080w" sizes="(max-width: 900px) 88vw, 520px" alt="The published Instagram grid for this case"></div><figcaption><span>${c.imgcap[0]}</span><span>${c.imgcap[1]}</span></figcaption></figure>`:''}
     <p class="dos-quote">${c.quote}</p>
     <div class="dos-grid">
       ${c.rows.map(r=>`<div class="dos-row"><div class="dos-k">${r[0]}</div><div class="dos-v">${r[1]}</div></div>`).join('')}
@@ -900,7 +1034,7 @@ document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',(
 
 /* ---------- SMOOTH SCROLL ---------- */
 let lenis = null;
-if(!REDUCED && typeof Lenis !== 'undefined'){
+if(!REDUCED && !TOUCH && typeof Lenis !== 'undefined'){
   lenis = new Lenis({duration:1.15, easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)), smoothWheel:true});
   lenis.on('scroll', ()=>{ if(window.ScrollTrigger) ScrollTrigger.update(); });
   const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
@@ -945,8 +1079,8 @@ if(!REDUCED){
   gsap.to(A,{xPercent:-25,duration:38,ease:'none',repeat:-1});
   gsap.set(B,{xPercent:-25});
   gsap.to(B,{xPercent:0,duration:44,ease:'none',repeat:-1});
-  gsap.to(A,{x:-160,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1}});
-  gsap.to(B,{x:180,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1}});
+  gsap.to(A,{x:SMALL?-70:-160,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1}});
+  gsap.to(B,{x:SMALL?80:180,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1}});
 }
 
 if(!REDUCED){
@@ -980,7 +1114,7 @@ gsap.utils.toArray('.grid-row').forEach(row=>{
     scrollTrigger:{trigger:row,start:'top 70%'}});
   gsap.from(copy.children,{y:40,clipPath:'inset(0 0 100% 0)',duration:.9,stagger:.09,ease:'power4.out',
     scrollTrigger:{trigger:row,start:'top 65%'}});
-  gsap.to(print,{y:-40,ease:'none',scrollTrigger:{trigger:row,start:'top bottom',end:'bottom top',scrub:1.4}});
+  if(!SMALL) gsap.to(print,{y:-40,ease:'none',scrollTrigger:{trigger:row,start:'top bottom',end:'bottom top',scrub:1.4}});
 });
 
 /* services: words rise, rows wipe */
@@ -1044,6 +1178,14 @@ ScrollTrigger.refresh();
 }
 
 window.addEventListener('load',()=>{if(typeof ScrollTrigger!=='undefined')ScrollTrigger.refresh();});
+let rt; const refresh=()=>{clearTimeout(rt);rt=setTimeout(()=>{if(typeof ScrollTrigger!=='undefined')ScrollTrigger.refresh();},220);};
+window.addEventListener('orientationchange',refresh);
+window.addEventListener('resize',refresh);
+/* lock body scroll properly on iOS when a case file is open */
+let scrollY=0;
+const _open=openCase, _close=closeCase;
+openCase=function(i){ scrollY=window.scrollY; _open(i); if(TOUCH){document.body.style.position='fixed';document.body.style.top=`-${scrollY}px`;document.body.style.width='100%';} };
+closeCase=function(){ _close(); if(TOUCH){document.body.style.position='';document.body.style.top='';document.body.style.width='';window.scrollTo(0,scrollY);} };
 </script>
 </body>
 </html>
